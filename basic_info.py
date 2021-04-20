@@ -10,6 +10,10 @@ plt.rcParams['font.serif'] = ['KaiTi']
 
 class BasicInfo:
 
+    """ This class processes basic infomation. 
+    Including gender, age, location (proviences, cities), degree, jobs, income, cars. 
+    """    
+
     numCar = 0
     sumCar = 0
     numNoCar = 0
