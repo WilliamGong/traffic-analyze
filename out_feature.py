@@ -172,5 +172,5 @@ class OutFeature:
 
     def drawNumIsPublic(self):
         sNumIsPublic = pd.Series(self.numIsPublic, name='使用公共交通的频率')
-        sNumIsPublic.plot.pie()
+        sNumIsPublic.plot.pie(autopct='%.2f')
         plt.show()
