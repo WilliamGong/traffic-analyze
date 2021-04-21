@@ -4,6 +4,7 @@ import basic_info
 import out_feature
 import choice
 import basic_func
+import attitude
 
 df = pd.read_csv("data.csv")
 
@@ -16,8 +17,11 @@ df = pd.read_csv("data.csv")
 dfBasicInfo = basic_info.BasicInfo(df)
 dfOutFeature = out_feature.OutFeature(df)
 dfChoice = choice.Choice(df)
-
-#dfBasicInfo.printCitiesGuangdong()
+dfTrend = attitude.Trend(df)
+dfMask = attitude.Mask(df)
+dfNecessity = attitude.Necessity(df)
+dfEffect = attitude.Effect(df)
+dfReason = attitude.Reason(df)
 
 
 
@@ -54,8 +58,19 @@ dfOutFeature.drawNumIsPublic()
 
 
 
+# attitudes
+basic_func.drawNumBar(dfTrend.avgs, dfTrend.index, '关于疫情动向的同意程度')
+basic_func.drawNumBar(dfMask.avgs, dfMask.index, '关于戴口罩出行的描述的同意程度')
+basic_func.drawNumBar(dfNecessity.avgs, dfNecessity.index, '关于公共交通防控措施有实施的必要性的同意程度')
+basic_func.drawNumBar(dfEffect.avgs, dfEffect.index, '防控措施的实施效果的满意程度')
+basic_func.drawNumBar(dfReason.avgs, dfReason.index, '使用公共交通的影响因素')
+
+
+
 # choice
+'''
 basic_func.drawNumPie(dfChoice.numChoiceDaily, '上下班出行是否选择公共交通')
 basic_func.drawNumPie(dfChoice.numChoicePlay, '娱乐出行是否选择公共交通')
 basic_func.drawNumPie(dfChoice.numChoiceWeekday, '工作日出行是否选择公共交通')
 basic_func.drawNumPie(dfChoice.numChoiceHoliday, '清明节假期出行是否愿意选择公共交通')
+'''
