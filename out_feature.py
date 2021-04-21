@@ -171,6 +171,6 @@ class OutFeature:
         plt.show()
 
     def drawNumIsPublic(self):
-        sNumIsPublic = pd.Series(self.numIsPublic)
+        sNumIsPublic = pd.Series(self.numIsPublic, name = '使用公共交通的频率')
         sNumIsPublic.plot.pie()
         plt.show()
