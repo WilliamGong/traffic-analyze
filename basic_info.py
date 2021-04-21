@@ -70,7 +70,7 @@ class BasicInfo:
         self.citiesGuangdong = self.dfCitiesGuangdong['city']
         self.degree = df['degree']
         self.jobs = df['job']
-        self.income = df['income_mounth']
+        self.income = df['income_month']
         self.isCar = df['is_car']
 
         self.putNumAge()
@@ -209,6 +209,11 @@ class BasicInfo:
 
 
     # draw fuctions
+    def drawNumGender(self):
+        sNumGender = pd.Series(self.numGender, name='性别分布')
+        sNumGender.plot.pie(autopct='%.2f')
+        plt.show()
+
     def drawNumAge(self):
         sNumAge = pd.Series(self.numAge, name='年龄分布')
         sNumAge.plot.bar()
