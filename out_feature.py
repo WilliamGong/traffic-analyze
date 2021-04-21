@@ -151,12 +151,12 @@ class OutFeature:
 
     # draw functions
     def drawNumOutDaily(self):
-        sNumOutDaily = pd.Series(self.numOutDaily)
+        sNumOutDaily = pd.Series(self.numOutDaily, name='每日出行次数')
         sNumOutDaily.plot.bar()
         plt.show()
 
     def drawNumOutAvg(self):
-        sNumOutAvg = pd.Series(self.numOutAvg)
+        sNumOutAvg = pd.Series(self.numOutAvg, name='每日平均出行距离')
         sNumOutAvg.plot.bar()
         plt.show()
 
@@ -171,6 +171,6 @@ class OutFeature:
         plt.show()
 
     def drawNumIsPublic(self):
-        sNumIsPublic = pd.Series(self.numIsPublic, name = '使用公共交通的频率')
+        sNumIsPublic = pd.Series(self.numIsPublic, name='使用公共交通的频率')
         sNumIsPublic.plot.pie()
         plt.show()

@@ -210,36 +210,36 @@ class BasicInfo:
 
     # draw fuctions
     def drawNumAge(self):
-        sNumAge = pd.Series(self.numAge)
+        sNumAge = pd.Series(self.numAge, name='年龄分布')
         sNumAge.plot.bar()
         plt.show()
 
     def drawNumProvience(self):
-        sNumProvience = pd.Series(self.numProvience)
+        sNumProvience = pd.Series(self.numProvience, name='调查对象所在省份')
         # sort with value (down)
         sNumProvience = sNumProvience.sort_values(ascending=False)
         sNumProvience.plot.bar()
         plt.show()
 
     def drawNumCityGuangdong(self):
-        sNumCityGuangdong = pd.Series(self.numCityGuangdong)
+        sNumCityGuangdong = pd.Series(self.numCityGuangdong, name='广东调查对象所在城市')
         # sort with value (down)
         sNumCityGuangdong = sNumCityGuangdong.sort_values(ascending=False)
         sNumCityGuangdong.plot.bar()
         plt.show()
     
     def drawNumDegree(self):
-        sNumDegree = pd.Series(self.numDegree)
+        sNumDegree = pd.Series(self.numDegree, name='年龄分布')
         sNumDegree.plot.bar()
         plt.show()
 
     def drawNumJob(self):
-        sNumJob = pd.Series(self.numJob)
+        sNumJob = pd.Series(self.numJob, name='职业分布')
         # change index to Chinese
         sNumJob.plot.bar()
         plt.show()
     
     def drawNumIncome(self):
-        sNumIncome = pd.Series(self.numIncome)
+        sNumIncome = pd.Series(self.numIncome, name='月收入')
         sNumIncome.plot.bar()
         plt.show()
