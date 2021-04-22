@@ -37,12 +37,13 @@ dfBasicInfo.getIsCar()
 
 '''
 dfBasicInfo.drawNumGender()
+basic_func.drawNumPie(dfBasicInfo.numAge, '年龄分布')
 dfBasicInfo.drawNumProvience()
-dfBasicInfo.drawNumAge()
-dfBasicInfo.drawNumCityGuangdong()
-dfBasicInfo.drawNumDegree()
-dfBasicInfo.drawNumJob()
-dfBasicInfo.drawNumIncome()
+basic_func.drawNumPie(dfBasicInfo.numCityGuangdong, '广东省调查对象来源城市分布')
+basic_func.drawNumPie(dfBasicInfo.numDegree, '学历分布')
+basic_func.drawNumPie(dfBasicInfo.numJob, '工作性质分布')
+basic_func.drawNumPie(dfBasicInfo.numIncome, '收入分布')
+basic_func.drawNumPie(dfBasicInfo.numIsCar, dfBasicInfo.indexIsCar, '私家车拥有情况分布')
 '''
 
 

@@ -17,6 +17,10 @@ class BasicInfo:
     numCar = 0
     sumCar = 0
     numNoCar = 0
+    indexIsCar = [
+        '拥有私家车', 
+        '没有私家车'
+    ]
 
     numGender = {
         "male": 0,
@@ -165,6 +169,8 @@ class BasicInfo:
             else:
                 self.sumCar += 1
                 self.numNoCar += 1
+
+        self.numIsCar = [self.numCar, self.numNoCar]
 
 
 
