@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+from functools import singledispatch
 
 # solve Chinese font
 plt.rcParams['font.sans-serif'] = ['KaiTi']
@@ -52,12 +53,19 @@ def indexAvg(ser):
 
 
 # draw functions
+@singledispatch
 def drawNumPie(dic, title):
         sDic = pd.Series(dic, name=title)
         sDic.plot.pie(autopct='%.2f')
         plt.show()
 
-def drawNumBar(ls, index, title):
-    sBar = pd.Series(ls, index, name=title)
+@drawNumPie.register
+def _(data: list, index, title):
+    sDic = pd.Series(data, index, name=title)
+    sDic.plot.pie(autopct='%.2f')
+    plt.show()
+
+def drawNumBar(data, index, title):
+    sBar = pd.Series(data, index, name=title)
     sBar.plot.bar()
     plt.show()
