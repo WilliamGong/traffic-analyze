@@ -10,11 +10,11 @@ plt.rcParams['font.serif'] = ['KaiTi']
 class OutFeature:
 
     numOutDaily = {
-        '6+': 0,
-        '4-6': 0,
-        '2-3': 0,
-        '1*': 0,    # "*" just looks the key not like an int var much.  
-        'no': 0
+        '每天6次以上': 0,
+        '每天4-6次': 0,
+        '每天2-3次': 0,
+        '每天一次': 0,    # "*" just looks the key not like an int var much.  
+        '几乎不出门': 0
     }
     numOutAvg = {
         '10km+': 0,
@@ -24,24 +24,24 @@ class OutFeature:
         '1km-': 0
     }
     numFirstOrderAim = {
-        'daily': 0,
-        'life': 0,
-        'play': 0,
-        'no_out': 0
+        '通勤': 0,
+        '生活': 0,
+        '娱乐': 0,
+        '几乎不出行': 0
     }
     numFirstOrderWay = {
-        'public': 0,
-        'private': 0,
-        'elec': 0,
-        'foot': 0,
-        'others': 0
+        '公共交通': 0,
+        '私家车': 0,
+        '自行车电动车': 0,
+        '步行': 0,
+        '其他': 0
     }
     numIsPublic = {
-        'daily': 0,
-        'often': 0,
-        'sometimes': 0,
-        'seldom': 0,
-        'no': 0
+        '每天使用': 0,
+        '经常使用': 0,
+        '偶尔使用': 0,
+        '几乎不使用': 0,
+        '不使用': 0
     }
 
 
@@ -75,15 +75,15 @@ class OutFeature:
     def putNumOutDaily(self):
         for i in self.outDaily:
             if i == 1:
-                self.numOutDaily['6+'] += 1
+                self.numOutDaily['每天6次以上'] += 1
             elif i == 2:
-                self.numOutDaily['4-6'] += 1
+                self.numOutDaily['每天4-6次'] += 1
             elif i == 3:
-                self.numOutDaily['2-3'] += 1
+                self.numOutDaily['每天2-3次'] += 1
             elif i == 4:
-                self.numOutDaily['1*'] += 1
+                self.numOutDaily['每天一次'] += 1
             elif i == 5:
-                self.numOutDaily['no'] += 1
+                self.numOutDaily['几乎不出门'] += 1
 
     def putNumOutAvg(self):
         for i in self.outAvg:
@@ -102,46 +102,46 @@ class OutFeature:
         # daily
         for i in self.orderAimDaily:
             if i == 1:
-                self.numFirstOrderAim['daily'] += 1
+                self.numFirstOrderAim['通勤'] += 1
         for i in self.orderAimLife:
             if i == 1:
-                self.numFirstOrderAim['life'] += 1
+                self.numFirstOrderAim['生活'] += 1
         for i in self.orderAimPlay:
             if i == 1:
-                self.numFirstOrderAim['play'] += 1
+                self.numFirstOrderAim['娱乐'] += 1
         for i in self.orderAimNoOut:
             if i == 1:
-                self.numFirstOrderAim['no_out'] += 1
+                self.numFirstOrderAim['几乎不出行'] += 1
 
     def putNumFirstOrderWay(self):
         for i in self.orderWayPublic:
             if i == 1:
-                self.numFirstOrderWay['public'] += 1
+                self.numFirstOrderWay['公共交通'] += 1
         for i in self.orderWayPrivate:
             if i == 1:
-                self.numFirstOrderWay['private'] += 1
+                self.numFirstOrderWay['私家车'] += 1
         for i in self.orderWayElec:
             if i == 1:
-                self.numFirstOrderWay['elec'] += 1
+                self.numFirstOrderWay['自行车电动车'] += 1
         for i in self.orderWayFoot:
             if i == 1:
-                self.numFirstOrderWay['foot'] += 1
+                self.numFirstOrderWay['步行'] += 1
         for i in self.orderWayOthers:
             if i == 1:
-                self.numFirstOrderWay['others'] += 1
+                self.numFirstOrderWay['其他'] += 1
 
     def putNumIsPublic(self):
         for i in self.isPublic:
             if i == 1:
-                self.numIsPublic['daily'] += 1
+                self.numIsPublic['每天使用'] += 1
             elif i == 2:
-                self.numIsPublic['often'] += 1
+                self.numIsPublic['经常使用'] += 1
             elif i == 3:
-                self.numIsPublic['sometimes'] += 1
+                self.numIsPublic['偶尔使用'] += 1
             elif i == 4:
-                self.numIsPublic['seldom'] += 1
+                self.numIsPublic['几乎不使用'] += 1
             elif i == 5:
-                self.numIsPublic['no'] += 1
+                self.numIsPublic['不使用'] += 1
 
 
 

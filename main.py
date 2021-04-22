@@ -50,8 +50,8 @@ basic_func.drawNumPie(dfBasicInfo.numIsCar, dfBasicInfo.indexIsCar, '私家车�
 
 # out feature
 '''
-dfOutFeature.drawNumOutDaily()
-dfOutFeature.drawNumOutAvg()
+basic_func.drawNumPie(dfOutFeature.numOutDaily, '每天出行次数分布')
+basic_func.drawNumPie(dfOutFeature.numOutAvg, '每天平均出行距离分布')
 dfOutFeature.drawNumFirstOrderAim()
 dfOutFeature.drawNumFirstOrderWay()
 dfOutFeature.drawNumIsPublic()
